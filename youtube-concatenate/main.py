@@ -17,7 +17,6 @@ def get_all_video_in_channel(channel_id):
 
     first_url = base_search_url + 'key={}&channelId={}&part=snippet,id&order=date&maxResults=25'.format(api_key,
                                                                                                         channel_id)
-
     video_links = []
     url = first_url
     while True:

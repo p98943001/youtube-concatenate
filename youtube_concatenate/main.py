@@ -5,6 +5,9 @@
 
 import urllib.request
 import json
+from youtube_concatenate.settings import API_KEY
+
+print(API_KEY)
 
 CHANNEL_ID = "UCKSVUHI9rbbkXhvAXK-2uxA"
 

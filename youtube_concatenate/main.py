@@ -1,4 +1,3 @@
-# API KEY AIzaSyDcpbfpVO-PT79-wMaPHYgoskmzQghc0a8
 # Get channel id by : https://socialnewsify.com/get-channel-id-by-username-youtube/
 # Code comes from : https://socialnewsify.com/get-channel-id-by-username-youtube/
 

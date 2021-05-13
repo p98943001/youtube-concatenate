@@ -12,7 +12,7 @@ class GetVedioList(Step):
 
         ## url list exist
         if utils.video_list_exists(channel_id):
-            print('find existing video list file of channel id:',channel_id)
+            print('find existing video list file of channel id:', channel_id)
             return self.read_file(utils.get_video_list_filepath(channel_id))
 
         ## get url list from 1-st

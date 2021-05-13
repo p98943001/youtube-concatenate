@@ -23,6 +23,8 @@ def main():
     ]
 
     utils = Utils()
+
+    ## start to run
     p = Pipeline(steps)
     p.run(inputs, utils)
 

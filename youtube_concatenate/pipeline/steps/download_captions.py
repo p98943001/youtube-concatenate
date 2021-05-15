@@ -20,6 +20,8 @@ class DownloadCaptions(Step):
             except (KeyError, AttributeError):
                 print('Error when downloading')
                 continue
+            except Exception as e:
+                print('!!!! Unknown "{}" Error when downloading'.format(e))
 
             # save the caption to a file
             text_file = open(utils.get_caption_filepath(url), "w", encoding='utf-8')

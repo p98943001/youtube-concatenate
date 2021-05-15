@@ -5,6 +5,7 @@ from youtube_concatenate.pipeline.steps.step import StepException
 from youtube_concatenate.utils import Utils
 from youtube_concatenate.pipeline.steps.preflight import Preflight
 from youtube_concatenate.pipeline.steps.postflight import Postflight
+from youtube_concatenate.pipeline.steps.read_caption import ReadCaption
 
 
 CHANNEL_ID = "UCKSVUHI9rbbkXhvAXK-2uxA"
@@ -19,6 +20,7 @@ def main():
         Preflight(),
         GetVedioList(),
         DownloadCaptions(),
+        ReadCaption(),
         Postflight(),
     ]
 

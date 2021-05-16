@@ -1,5 +1,6 @@
 from youtube_concatenate.pipeline.steps.step import Step
 
+
 class ReadCaption(Step):
     def process(self, data, inputs, utils):
         for yt in data:
@@ -7,7 +8,7 @@ class ReadCaption(Step):
                 continue
 
             captions = {}
-            with open(yt.caption_filepath,'r') as f:
+            with open(yt.caption_filepath, 'r') as f:
                 time_line = False
                 time = None
                 caption = None
@@ -24,5 +25,3 @@ class ReadCaption(Step):
 
             yt.captions = captions
         return data
-
-

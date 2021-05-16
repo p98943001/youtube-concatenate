@@ -1,10 +1,10 @@
 import os
-from youtube_concatenate.settings import CAPTIONS_DIR\
-from  youtube_concatenate.settings import  VIDEOS_DIR
+from youtube_concatenate.settings import CAPTIONS_DIR \
+    from youtube_concatenate.settings import VIDEOS_DIR
 
 
 class YT():
-    def __init__(self,url):
+    def __init__(self, url):
         self.url = url
         self.id = self.get_vedio_id_from_url(self.url)
         self.caption_filepath = self.get_caption_filepah()

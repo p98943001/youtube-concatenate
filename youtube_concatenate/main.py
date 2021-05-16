@@ -6,6 +6,7 @@ from youtube_concatenate.utils import Utils
 from youtube_concatenate.pipeline.steps.preflight import Preflight
 from youtube_concatenate.pipeline.steps.postflight import Postflight
 from youtube_concatenate.pipeline.steps.read_caption import ReadCaption
+from youtube_concatenate.pipeline.steps.initialize_yt import InitializeYT
 
 
 CHANNEL_ID = "UCKSVUHI9rbbkXhvAXK-2uxA"
@@ -14,11 +15,13 @@ CHANNEL_ID = "UCKSVUHI9rbbkXhvAXK-2uxA"
 def main():
     inputs = {
         'channel_id': CHANNEL_ID,
+        'search_word': 'incredible',
     }
 
     steps = [
         Preflight(),
         GetVedioList(),
+        InitializeYT()
         DownloadCaptions(),
         ReadCaption(),
         Postflight(),

@@ -7,6 +7,7 @@ from youtube_concatenate.pipeline.steps.preflight import Preflight
 from youtube_concatenate.pipeline.steps.postflight import Postflight
 from youtube_concatenate.pipeline.steps.read_caption import ReadCaption
 from youtube_concatenate.pipeline.steps.initialize_yt import InitializeYT
+from youtube_concatenate.pipeline.steps.search import Search
 
 CHANNEL_ID = "UCKSVUHI9rbbkXhvAXK-2uxA"
 
@@ -20,9 +21,10 @@ def main():
     steps = [
         Preflight(),
         GetVedioList(),
-        InitializeYT()
+        InitializeYT(),
         DownloadCaptions(),
         ReadCaption(),
+        Search(),
         Postflight(),
     ]
 

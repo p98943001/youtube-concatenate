@@ -22,6 +22,7 @@ class DownloadCaptions(Step):
                 continue
             except Exception as e:
                 print('!!!! Unknown "{}" Error when downloading'.format(e))
+                continue
 
             # save the caption to a file
             text_file = open(yt.get_caption_filepath(yt.url), "w", encoding='utf-8')

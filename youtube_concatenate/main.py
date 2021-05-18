@@ -8,6 +8,7 @@ from youtube_concatenate.pipeline.steps.postflight import Postflight
 from youtube_concatenate.pipeline.steps.read_caption import ReadCaption
 from youtube_concatenate.pipeline.steps.initialize_yt import InitializeYT
 from youtube_concatenate.pipeline.steps.search import Search
+from youtube_concatenate.pipeline.steps.download_videos import DownloadVideos
 
 CHANNEL_ID = "UCKSVUHI9rbbkXhvAXK-2uxA"
 
@@ -25,6 +26,7 @@ def main():
         DownloadCaptions(),
         ReadCaption(),
         Search(),
+        DownloadVideos(),
         Postflight(),
     ]
 

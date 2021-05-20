@@ -6,7 +6,7 @@ __pycache__/
 
 # Caption & vedio
 downloads/
-
+outputs/
 
 # C extensions
 *.so
